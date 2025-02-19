@@ -1,4 +1,5 @@
 <template>
+  <el-button type="primary">button</el-button>
   <div>LAYOUT</div>
 </template>
 
