@@ -1,8 +1,13 @@
 <template>
   <div class="app-header-nav">
     <div><router-link to="/">首页</router-link></div>
-    <div v-for="item in categoryStore.categoryList">
+    <div v-for="item in categoryStore.categoryList" :key="item.id">
       <router-link to="/"> {{ item.name }}</router-link>
+    </div>
+    <div class="line"></div>
+    <div class="nav-end">
+      <router-link to="/"> 品牌</router-link>
+      <router-link to="/"> 专题</router-link>
     </div>
   </div>
 </template>
@@ -16,10 +21,24 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .app-header-nav {
-  display:  flex;
+  display: flex;
   align-items: center;
-
+  gap: 50px;
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+  }
+  .nav-end {
+    display: flex;
+    gap: 50px;
+  }
+  .line {
+    height: 20px;
+    width: 5px;
+    background-color: $xtxColor;
+  }
 }
 </style>

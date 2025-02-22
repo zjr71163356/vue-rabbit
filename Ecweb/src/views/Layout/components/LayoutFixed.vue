@@ -26,7 +26,8 @@ import LayoutHeaderUI from "./LayoutHeaderUI.vue";
   .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
   }
   .logo {
     width: 200px;
