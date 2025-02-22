@@ -2,12 +2,14 @@
   <div class="app-header-sticky">
     <div class="container">
       <RouterLink class="logo" to="/" />
+      <LayoutHeaderUI></LayoutHeaderUI>
     </div>
-    LayoutFixed
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import LayoutHeaderUI from "./LayoutHeaderUI.vue";
+</script>
 
 <style scoped lang="scss">
 .app-header-sticky {
@@ -24,6 +26,7 @@
   .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   .logo {
     width: 200px;

@@ -11,10 +11,11 @@ import LayoutFixed from "./components/LayoutFixed.vue";
 import LayoutNav from "./components/LayoutNav.vue";
 import LayoutHeader from "./components/LayoutHeader.vue";
 import LayoutFooter from "./components/LayoutFooter.vue";
-import HelloWorld from "@/components/HelloWorld.vue";
-import { getCategoryAPI } from "@/api/layout";
+import { usecategoryStore } from "@/stores/categoryStore";
 import { onMounted } from "vue";
-onMounted(() => console.log(getCategoryAPI()));
+
+const categoryStore = usecategoryStore();
+onMounted(() => categoryStore.getCategory());
 </script>
 
 <style scoped lang="scss"></style>

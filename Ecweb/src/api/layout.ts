@@ -1,4 +1,5 @@
 import HttpInstance from "./http";
-export function getCategoryAPI() {
-    return HttpInstance( { url: "home/category/head" });
+import type { GetCategoryAPIResponse } from "../utils/types";
+export function getCategoryAPI(): Promise<GetCategoryAPIResponse> {
+  return HttpInstance({ url: "home/category/head" });
 }
