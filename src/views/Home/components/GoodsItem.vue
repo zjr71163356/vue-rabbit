@@ -1,12 +1,11 @@
 <script setup>
 defineProps({
   goods: {
-    tppe: Object,
-    default: () => { }
-  }
-})
+    type: Object,
+    default: () => {},
+  },
+});
 </script>
-
 
 <template>
   <RouterLink to="/" class="goods-item">
@@ -23,7 +22,7 @@ defineProps({
   width: 220px;
   padding: 20px 30px;
   text-align: center;
-  transition: all .5s;
+  transition: all 0.5s;
 
   &:hover {
     transform: translate3d(0, -3px, 0);

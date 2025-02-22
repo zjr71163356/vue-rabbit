@@ -1,10 +1,8 @@
 <script setup>
-import LayoutHeaderUl from './LayoutHeaderUl.vue'
+import LayoutHeaderUl from "./LayoutHeaderUl.vue";
 // vueUse
-import { useScroll } from '@vueuse/core'
-const { y } = useScroll(window)
-
-
+import { useScroll } from "@vueuse/core";
+const { y } = useScroll(window);
 </script>
 
 <template>
@@ -22,8 +20,7 @@ const { y } = useScroll(window)
   </div>
 </template>
 
-
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .app-header-sticky {
   width: 100%;
   height: 80px;

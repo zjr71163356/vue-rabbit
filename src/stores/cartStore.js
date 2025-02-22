@@ -10,7 +10,7 @@ export const useCartStore = defineStore('cart', () => {
   // 1. 定义state - cartList
   const cartList = ref([])
   // 获取最新购物车列表action
-  const updateNewList = async () => {
+  const updateNewList= async () => {
     const res = await findNewCartListAPI()
     cartList.value = res.result
   }

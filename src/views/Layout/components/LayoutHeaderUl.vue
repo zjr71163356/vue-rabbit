@@ -1,8 +1,7 @@
 <script setup>
-import { useCategoryStore } from '@/stores/categoryStore'
-const categoryStore = useCategoryStore()
+import { useCategoryStore } from "@/stores/categoryStore";
+const categoryStore = useCategoryStore();
 </script>
-
 
 <template>
   <ul class="app-header-nav">
@@ -16,7 +15,6 @@ const categoryStore = useCategoryStore()
     </li>
   </ul>
 </template>
-
 
 <style lang="scss">
 .app-header-nav {
