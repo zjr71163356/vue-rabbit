@@ -22,6 +22,8 @@ import LayoutHeaderUI from "./LayoutHeaderUI.vue";
   width: 100%;
   height: 80px;
   border-bottom: 1px solid #e4e4e4;
+  transform: translateY(-100%);
+  opacity: 0;
   /*display:flex会让容器中的项块化*/
   .container {
     display: flex;

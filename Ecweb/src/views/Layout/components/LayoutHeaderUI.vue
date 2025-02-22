@@ -26,11 +26,9 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 50px;
-  a {
-    text-decoration: none;
-    color: #000;
-    font-size: 16px;
-  }
+  color: #000;
+  font-size: 16px;
+
   .nav-end {
     display: flex;
     gap: 50px;
