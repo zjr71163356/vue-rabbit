@@ -1,14 +1,16 @@
 import { imageViewerProps } from "element-plus";
 import httpInstance from "../api/http";
-import type { APIResponse, Banner } from "../utils/types";
-imageViewerProps
+import type { APIResponse, Banner, Good } from "../utils/types";
+imageViewerProps;
 // 获取banner
 
 interface BannerParams {
   distributionSite?: string;
 }
 
-export function getBannerAPI(params: BannerParams = {}):Promise<APIResponse<Banner>> {
+export function getBannerAPI(
+  params: BannerParams = {}
+): Promise<APIResponse<Banner>> {
   // 分销站点 1为首页 2为商品页
   // 默认为1 商品为2
   const { distributionSite = "1" } = params;
@@ -25,7 +27,7 @@ export function getBannerAPI(params: BannerParams = {}):Promise<APIResponse<Bann
  * @param {*}
  * @return {*}
  */
-export const findNewAPI = () => {
+export const findNewAPI = (): Promise<APIResponse<Good>> => {
   return httpInstance({
     url: "/home/new",
   });
