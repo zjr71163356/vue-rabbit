@@ -25,3 +25,9 @@ export interface Banner {
   id: number;
   imgUrl: string;
 }
+export interface Hot {
+  alt: string;
+  id: string;
+  picture: string;
+  title: string;
+}

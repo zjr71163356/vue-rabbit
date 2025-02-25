@@ -18,20 +18,8 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
-$good-width: 240px;
 .good-item {
-  width: $good-width;
-  height: 300px;
-
-  img {
-    width: inherit;
-    height: $good-width;
-  }
-
-  &-info {
-    width: inherit;
-    height: 60px;
-    background-color: #f1f9f4;
-  }
+  width: 25%;
+  background-color: #f1f9f4;
 }
 </style>
