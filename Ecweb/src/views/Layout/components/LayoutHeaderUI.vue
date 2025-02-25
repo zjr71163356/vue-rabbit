@@ -1,13 +1,11 @@
 <template>
-  <div class="app-header-nav">
-    <div><router-link to="/">首页</router-link></div>
-    <div v-for="item in categoryStore.categoryList" :key="item.id">
-      <router-link to="/"> {{ item.name }}</router-link>
-    </div>
-    <div class="line"></div>
-    <div class="nav-end">
-      <router-link to="/"> 品牌</router-link>
-      <router-link to="/"> 专题</router-link>
+  <div class="container">
+    <RouterLink class="logo" to="/" />
+    <div class="app-header-nav">
+      <div><router-link to="/">首页</router-link></div>
+      <div v-for="item in categoryStore.categoryList" :key="item.id">
+        <router-link to="/"> {{ item.name }}</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -22,21 +20,23 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-.app-header-nav {
+.logo {
+  display: block;
+  width: 200px;
+  height: 80px;
+  background: url("@/assets/images/logo.png") no-repeat right 2px;
+  background-size: 160px auto;
+}
+.container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 50px;
-  color: #000;
-  font-size: 16px;
-
-  .nav-end {
+  .app-header-nav {
     display: flex;
+    align-items: center;
     gap: 50px;
-  }
-  .line {
-    height: 20px;
-    width: 5px;
-    background-color: $xtxColor;
+    color: #000;
   }
 }
 </style>

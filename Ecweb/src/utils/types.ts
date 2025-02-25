@@ -15,9 +15,13 @@ export interface Good {
   orderNum: string | null;
 }
 
-
-export interface GetCategoryAPIResponse {
+export interface APIResponse<T> {
   code: string;
   msg: string;
-  result: Array<Category>;
+  result: Array<T>;
+}
+
+export interface Banner {
+  id: number;
+  imgUrl: string;
 }

@@ -1,8 +1,12 @@
 <template>
   <div class="app-header-sticky">
     <div class="container">
-      <RouterLink class="logo" to="/" />
       <LayoutHeaderUI></LayoutHeaderUI>
+      <div class="line"></div>
+      <div class="nav-end">
+        <router-link to="/"> 品牌</router-link>
+        <router-link to="/"> 专题</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -22,20 +26,26 @@ import LayoutHeaderUI from "./LayoutHeaderUI.vue";
   width: 100%;
   height: 80px;
   border-bottom: 1px solid #e4e4e4;
-  transform: translateY(-100%);
+  font-size: 16px;
   opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.3s;
   /*display:flex会让容器中的项块化*/
   .container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
-  }
-  .logo {
-    width: 200px;
-    height: 80px;
-    background: url("@/assets/images/logo.png") no-repeat right 2px;
-    background-size: 160px auto;
+
+    .nav-end {
+      display: flex;
+      gap: 50px;
+    }
+    .line {
+      height: 20px;
+      width: 5px;
+      background-color: $xtxColor;
+    }
   }
 }
 </style>
