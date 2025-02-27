@@ -1,9 +1,8 @@
 <template>
   <div class="good-item">
     <img :src="item.picture" alt="商品图片" />
-    <div class="good-item-info">
-      <slot name="info"></slot>
-    </div>
+
+    <slot name="info"></slot>
   </div>
 </template>
 
@@ -17,9 +16,4 @@ const props = defineProps({
 });
 </script>
 
-<style scoped lang="scss">
-.good-item {
-  width: 25%;
-  background-color: #f1f9f4;
-}
-</style>
+<style scoped lang="scss"></style>

@@ -2,8 +2,14 @@ export interface Category {
   id: string;
   name: string;
   picture: string;
-  children: Category[] | null;
+  children: Category[] | SubCategory[] | null;
   goods: Good[] | null;
+}
+export interface SubCategory {
+  id: string;
+  name: string;
+  layer: number;
+  parent: string | null;
 }
 
 export interface Good {
@@ -25,6 +31,7 @@ export interface Banner {
   id: number;
   imgUrl: string;
 }
+
 export interface Hot {
   alt: string;
   id: string;

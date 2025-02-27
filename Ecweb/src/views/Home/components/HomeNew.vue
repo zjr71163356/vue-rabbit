@@ -5,7 +5,12 @@
       <span>新鲜出炉 品质靠谱</span>
     </div>
     <div class="new-good">
-      <GoodItem v-for="item in items" :key="item.id" :item="item">
+      <GoodItem
+        v-for="item in items"
+        :key="item.id"
+        :item="item"
+        class="new-good-item"
+      >
         <template #info>
           <div class="new-good-info">
             <div class="new-good-name">{{ item.name }}</div>
@@ -38,23 +43,26 @@ h1 {
 .new-good {
   display: flex;
   justify-content: space-between;
-}
-.new-good-name {
-  font-size: 16px;
-  color: #333;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
-.new-good-price {
-  font-size: 14px;
-  color: #f40;
-}
-.new-good-info {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 22px;
+  &-name {
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  &-price {
+    color: #f40;
+  }
+  &-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-item {
+    width: 25%;
+    background-color: #f1f9f4;
+  }
 }
 </style>

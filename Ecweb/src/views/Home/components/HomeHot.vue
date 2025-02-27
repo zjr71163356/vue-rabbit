@@ -38,6 +38,11 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &-name {
+    font-size: 18px;
+    
+  }
   &-info {
     display: flex;
     flex-direction: column;

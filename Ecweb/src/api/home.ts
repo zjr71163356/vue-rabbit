@@ -1,6 +1,6 @@
 import { imageViewerProps } from "element-plus";
 import httpInstance from "../api/http";
-import type { APIResponse, Banner, Good, Hot } from "../utils/types";
+import type { APIResponse, Banner, Category, Good, Hot } from "../utils/types";
 imageViewerProps;
 // 获取banner
 
@@ -49,7 +49,7 @@ export const getHotAPI = (): Promise<APIResponse<Hot>> => {
  * @param {*}
  * @return {*}
  */
-export const getGoodsAPI = () => {
+export const getGoodsAPI = (): Promise<APIResponse<Category>> => {
   return httpInstance({
     url: "/home/goods",
   });
