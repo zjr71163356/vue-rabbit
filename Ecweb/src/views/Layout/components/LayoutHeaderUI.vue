@@ -4,16 +4,16 @@
     <div class="app-header-nav">
       <div><router-link to="/">首页</router-link></div>
       <div v-for="item in categoryStore.categoryList" :key="item.id">
-        <router-link to="/"> {{ item.name }}</router-link>
+        <router-link :to="`/category/${item.id}`"> {{ item.name }}</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { usecategoryStore } from "@/stores/categoryStore";
+import { useCategoryStore } from "@/stores/categoryStore";
 import { onMounted } from "vue";
-const categoryStore = usecategoryStore();
+const categoryStore = useCategoryStore();
 onMounted(() => {
   console.log(categoryStore.categoryList);
 });

@@ -67,14 +67,9 @@ onMounted(async () => {
     .good-list {
       display: flex;
       justify-content: center;
-      align-items: start;
       flex-wrap: wrap;
       width: 80%;
       .good-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 50%;
         width: 25%;
         padding: 30px;
         .name,

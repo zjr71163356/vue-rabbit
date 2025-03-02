@@ -5,7 +5,7 @@
       <span>新鲜出炉 品质靠谱</span>
     </div>
     <div class="hot-good">
-      <GoodItem v-for="item in items" :key="item.id" :item="item">
+      <GoodItem v-for="item in items" :key="item.id" :item="item" class="">
         <template #info>
           <div class="hot-good-info">
             <div class="hot-good-name">{{ item.title }}</div>
@@ -38,7 +38,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  
   &-name {
     font-size: 18px;
     

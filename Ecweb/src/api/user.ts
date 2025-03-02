@@ -1,5 +1,5 @@
 // 封装所有和用户相关的接口函数
-import request from "../api/http";
+import HttpInstance from "../api/http";
 
 export const loginAPI = ({
   account,
@@ -8,7 +8,7 @@ export const loginAPI = ({
   account: string;
   password: string;
 }) => {
-  return request({
+  return HttpInstance({
     url: "/login",
     method: "POST",
     data: {
@@ -19,7 +19,7 @@ export const loginAPI = ({
 };
 
 export const getLikeListAPI = ({ limit = 4 }) => {
-  return request({
+  return HttpInstance({
     url: "/goods/relevant",
     params: {
       limit,

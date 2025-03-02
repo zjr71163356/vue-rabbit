@@ -1,7 +1,6 @@
 <template>
   <div class="good-item">
-    <img :src="item.picture" alt="商品图片" />
-
+    <img v-lazy-img="item.picture" alt="商品图片" />
     <slot name="info"></slot>
   </div>
 </template>
@@ -16,4 +15,11 @@ const props = defineProps({
 });
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+img {
+  min-width: 160px;
+  min-height: 160px;
+  width: 100%;
+
+}
+</style>

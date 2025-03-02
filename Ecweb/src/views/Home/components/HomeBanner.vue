@@ -6,7 +6,7 @@
         :key="item.id"
         class="carousel-item"
       >
-        <img :src="item.imgUrl" alt="banner" class="banner-img" />
+        <img v-lazy-img="item.imgUrl" alt="banner" class="banner-img" />
       </el-carousel-item>
     </el-carousel>
   </div>
