@@ -1,6 +1,6 @@
 import HttpInstance from "../api/http";
-
-export function getCategoryAPI(id) {
+import type { SubCategory } from "../utils/types";
+export function getCategoryAPI(id: string) {
   return HttpInstance({
     url: "/category",
     params: {
@@ -15,7 +15,7 @@ export function getCategoryAPI(id) {
  * @return {*}
  */
 
-export const getCategoryFilterAPI = (id) => {
+export const getCategoryFilterAPI = (id: string) => {
   return HttpInstance({
     url: "/category/sub/filter",
     params: {
@@ -34,7 +34,7 @@ export const getCategoryFilterAPI = (id) => {
    } 
  * @return {*}
  */
-export const getSubCategoryAPI = (data) => {
+export const getSubCategoryAPI = (data: SubCategory) => {
   return HttpInstance({
     url: "/category/goods/temporary",
     method: "POST",

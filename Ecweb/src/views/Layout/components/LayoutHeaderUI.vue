@@ -14,9 +14,7 @@
 import { useCategoryStore } from "@/stores/categoryStore";
 import { onMounted } from "vue";
 const categoryStore = useCategoryStore();
-onMounted(() => {
-  console.log(categoryStore.categoryList);
-});
+ 
 </script>
 
 <style scoped lang="scss">

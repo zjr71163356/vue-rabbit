@@ -1,9 +1,10 @@
-<script setup lang="ts">
+<script setup>
 import GoodsItem from "../Home/components/GoodItem.vue";
-import { useCategoryStore } from "@/stores/categoryStore";
-import { ref } from "vue";
-const categoryStore = useCategoryStore();
-const categoryData = ref({});
+import { useCategory } from "./composables/useCategory";
+import { useBanner } from "./composables/useBanner";
+
+const { categoryData } = useCategory();
+const { bannerList } = useBanner();
 </script>
 
 <template>
@@ -44,7 +45,7 @@ const categoryData = ref({});
           <h3>- {{ item.name }}-</h3>
         </div>
         <div class="body">
-          <GoodsItem v-for="good in item.goods" :goods="good" :key="good.id" />
+          <GoodsItem v-for="good in item.goods" :item="good" :key="good.id" />
         </div>
       </div>
     </div>

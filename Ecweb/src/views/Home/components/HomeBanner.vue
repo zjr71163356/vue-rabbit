@@ -33,7 +33,6 @@ onMounted(async () => {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 98;
 
   img {
     width: 100%;

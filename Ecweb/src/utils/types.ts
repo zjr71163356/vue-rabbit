@@ -3,8 +3,9 @@ export interface Category {
   name: string;
   picture: string;
   children: Category[] | SubCategory[] | null;
-  goods: Good[] | null;
+  goods?: Good[] | null;
 }
+
 export interface SubCategory {
   id: string;
   name: string;
@@ -37,4 +38,11 @@ export interface Hot {
   id: string;
   picture: string;
   title: string;
+}
+
+export interface SubCategory {
+  categoryId: number;
+  page: number;
+  pageSize: number;
+  sortField: "publishTime" | "orderNum" | "evaluateNum";
 }
