@@ -1,6 +1,6 @@
 <template>
-  <div class="app-header-sticky">
-    <div class="container">
+  <div class="app-header-sticky" :class="{ show: y > 78 }">
+    <div class="mycontainer">
       <LayoutHeaderUI></LayoutHeaderUI>
       <div class="line"></div>
       <div class="nav-end">
@@ -13,11 +13,13 @@
 
 <script lang="ts" setup>
 import LayoutHeaderUI from "./LayoutHeaderUI.vue";
+import { useScroll } from "@vueuse/core";
+const { y } = useScroll(window);
 </script>
 
 <style scoped lang="scss">
 .app-header-sticky {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
@@ -31,7 +33,12 @@ import LayoutHeaderUI from "./LayoutHeaderUI.vue";
   transform: translateY(-100%);
   transition: all 0.3s;
   /*display:flex会让容器中的项块化*/
-  .container {
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s;
+  }
+  .mycontainer {
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,9 +1,9 @@
 import { onMounted, ref } from "vue";
-import type { Category } from "@/utils/types";
-import { getCategoryAPI } from "@/api/category";
+import type { Category } from "@/utils/types.ts";
+import { getCategoryAPI } from "@/api/category.ts";
 import { onBeforeRouteUpdate, useRoute } from "vue-router";
 export function useCategory() {
-  const categoryData = ref<Category>({});
+  const categoryData = ref<Category>({ id: "", name: "", picture: "", children: null });
   const route = useRoute();
   const getCategory = async (id: string | string[] = route.params.id) => {
     console.log(id);

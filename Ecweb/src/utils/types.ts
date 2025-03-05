@@ -27,7 +27,11 @@ export interface APIResponse<T> {
   msg: string;
   result: Array<T>;
 }
-
+export interface SingleAPIResponse<T> {
+  code: string;
+  msg: string;
+  result: T;
+}
 export interface Banner {
   id: number;
   imgUrl: string;
@@ -40,9 +44,44 @@ export interface Hot {
   title: string;
 }
 
-export interface SubCategory {
-  categoryId: number;
+export interface FilterData {
+  categoryId: string  ;
   page: number;
   pageSize: number;
   sortField: "publishTime" | "orderNum" | "evaluateNum";
+}
+export interface Brand {
+  desc: string;
+  id: string;
+  logo: string;
+  name: string;
+  nameEn: string;
+  picture: string;
+  place: string;
+  type: string | null;
+}
+
+export interface Property {
+  id: string;
+  name: string;
+}
+
+export interface CategoryData {
+  brands: Brand[];
+  categories: SubCategory[];
+  goods: Good[];
+  id: string;
+  name: string;
+  parentId: string;
+  parentName: string;
+  picture: string;
+  saleProperties: Property[];
+}
+
+export interface GoodList {
+  counts: number;
+  items: Good[];
+  page: number;
+  pageSize: number;
+  pages: number;
 }

@@ -4,7 +4,9 @@
     <div class="app-header-nav">
       <div><router-link to="/">首页</router-link></div>
       <div v-for="item in categoryStore.categoryList" :key="item.id">
-        <router-link :to="`/category/${item.id}`"> {{ item.name }}</router-link>
+        <router-link active-class="active" :to="`/category/${item.id}`">
+          {{ item.name }}</router-link
+        >
       </div>
     </div>
   </div>
@@ -14,7 +16,6 @@
 import { useCategoryStore } from "@/stores/categoryStore";
 import { onMounted } from "vue";
 const categoryStore = useCategoryStore();
- 
 </script>
 
 <style scoped lang="scss">
@@ -35,6 +36,11 @@ const categoryStore = useCategoryStore();
     align-items: center;
     gap: 50px;
     color: #000;
+    a:hover,
+    .active {
+      color: $xtxColor;
+      border-bottom: 1px solid $xtxColor;
+    }
   }
 }
 </style>

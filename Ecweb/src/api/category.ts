@@ -1,6 +1,14 @@
 import HttpInstance from "../api/http";
-import type { SubCategory } from "../utils/types";
-export function getCategoryAPI(id: string) {
+import type {
+  FilterData,
+  SingleAPIResponse,
+  Category,
+  CategoryData,
+  GoodList,
+} from "@/utils/types";
+export function getCategoryAPI(
+  id: string | string[]
+): Promise<SingleAPIResponse<Category>> {
   return HttpInstance({
     url: "/category",
     params: {
@@ -15,7 +23,9 @@ export function getCategoryAPI(id: string) {
  * @return {*}
  */
 
-export const getCategoryFilterAPI = (id: string) => {
+export const getCategoryFilterAPI = (
+  id: string | string[]
+): Promise<SingleAPIResponse<CategoryData>> => {
   return HttpInstance({
     url: "/category/sub/filter",
     params: {
@@ -34,7 +44,9 @@ export const getCategoryFilterAPI = (id: string) => {
    } 
  * @return {*}
  */
-export const getSubCategoryAPI = (data: SubCategory) => {
+export const getSubCategoryAPI = (
+  data: FilterData
+): Promise<SingleAPIResponse<GoodList>> => {
   return HttpInstance({
     url: "/category/goods/temporary",
     method: "POST",
