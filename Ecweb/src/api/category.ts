@@ -18,7 +18,7 @@ export function getCategoryAPI(
 }
 
 /**
- * @description: 获取二级分类列表数据
+ * @description:获取导航数据
  * @param {*} id 分类id
  * @return {*}
  */
@@ -35,7 +35,7 @@ export const getCategoryFilterAPI = (
 };
 
 /**
- * @description: 获取导航数据
+ * @description:  获取二级分类列表数据 
  * @data { 
      categoryId: 1005000 ,
      page: 1,
